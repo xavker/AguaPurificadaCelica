@@ -4,17 +4,20 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="75dp"
     android:gravity="center_vertical">
 
+        
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardCornerRadius="20dp"
         android:layout_margin="8dp">
 
-        <RelativeLayout
+            <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="500dp">
+            android:orientation="vertical"
+            android:layout_height="620dp">
 
             <ImageView
                 android:id="@+id/image"
@@ -40,14 +43,14 @@
                 android:layout_marginTop="3dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                android:maxLines="14"
+                android:maxLines="20"
+
                 android:drawablePadding="5dp"
                 android:ellipsize="end"
                 android:text="Description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
-
-        </RelativeLayout>
+            </LinearLayout>
 
 
     </androidx.cardview.widget.CardView>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -55,53 +54,34 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/btnpedirunbidon"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:backgroundTint="@color/colorPrimaryDark"
-            android:text="PEDIR UN BOTELLON"
-
-            android:textColor="@color/colorWhite" />
-
-        <Button
-            android:id="@+id/btnSolicitar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_margin="15dp"
-            android:backgroundTint="@color/colorPrimaryDark"
-            android:text="REALIDA AUMENTADA"
-            android:textColor="@color/colorWhite" />
-
-        <Button
-            android:id="@+id/btnConocenos"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_margin="15dp"
-            android:backgroundTint="@color/colorPrimaryDark"
-            android:text="CONOCENOS"
-            android:textColor="@color/colorWhite" />
-        <Button
-            android:id="@+id/btnEncuentranoss"
+            android:id="@+id/btnbotella"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:layout_margin="20dp"
             android:backgroundTint="@color/colorPrimaryDark"
-            android:text="ENCUENTRANOS"
+            android:text="Escanea botella"
             android:textColor="@color/colorWhite" />
+
         <Button
-            android:id="@+id/btnContactanos"
+            android:id="@+id/btnetiqueta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:layout_margin="15dp"
+            android:layout_margin="20dp"
             android:backgroundTint="@color/colorPrimaryDark"
-            android:text="CONTACTANOS"
+            android:text="Escanea etiqueta"
             android:textColor="@color/colorWhite" />
 
+        <Button
+            android:id="@+id/btnLogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="20dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:text="Escanea Logo"
+            android:textColor="@color/colorWhite" />
 
     </LinearLayout>
 

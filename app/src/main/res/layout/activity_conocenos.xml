@@ -6,20 +6,21 @@
 
 
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewpageturismos"
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpageturismos"
 
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:foregroundGravity="center"
-        android:layout_centerInParent="true"
-        android:overScrollMode="never"
-        android:clipToPadding="false"
-       >
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:foregroundGravity="center"
+            android:layout_centerInParent="true"
+            android:overScrollMode="never"
+            android:clipToPadding="false"
+            >
+
+
 
 
     </androidx.viewpager.widget.ViewPager>
-
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/circleImageBack"

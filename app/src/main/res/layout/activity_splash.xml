@@ -23,18 +23,18 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="16dp"
             android:layout_marginLeft="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:gravity="center_horizontal"
             android:text="AGUA PURIFICADA \n CELICA"
             android:textColor="@color/colorWhite"
-            android:textSize="36sp"
+            android:textSize="30sp"
             android:textStyle="bold|italic"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="36dp"
             tools:layout_editor_absoluteY="672dp" />
     </io.github.florent37.shapeofview.shapes.ArcView>
 
@@ -62,7 +62,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:gravity="center_horizontal"
-        android:text="Cangando..."
+        android:text="Cargando..."
         android:textColor="@color/colorPrimary"
         android:textSize="32sp"
         android:textStyle="italic"

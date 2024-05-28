@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:layout_marginBottom="20dp"
+            android:text="Escoge la ciudad donde te llevaremos el pedido."/>
+
+        <Button
+            android:id="@+id/button_celica"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Celica" />
+
+        <Button
+            android:id="@+id/button_macara"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Macará" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

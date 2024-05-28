@@ -8,6 +8,35 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:1003328431147:android:198e627bfbbfa08fdf766e",
+        "android_client_info": {
+          "package_name": "com.example.aguacelica"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1003328431147-igi3g29r3l4ppo5nr3uv1cfinj6pqkhj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdOCBwB1-KGf_3FQWusvg5zE_5IUiDUIg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1003328431147-igi3g29r3l4ppo5nr3uv1cfinj6pqkhj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:1003328431147:android:e099d808915fdce0df766e",
         "android_client_info": {
           "package_name": "com.example.aguacelicatv5"
@@ -283,6 +312,35 @@
             "certificate_hash": "9dcd24b2cd231ce63e852c6b0286096b6357f139"
           }
         },
+        {
+          "client_id": "1003328431147-igi3g29r3l4ppo5nr3uv1cfinj6pqkhj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdOCBwB1-KGf_3FQWusvg5zE_5IUiDUIg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1003328431147-igi3g29r3l4ppo5nr3uv1cfinj6pqkhj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1003328431147:android:4c8df0ade83b54d2df766e",
+        "android_client_info": {
+          "package_name": "com.xavker.aguapurificadacelica"
+        }
+      },
+      "oauth_client": [
         {
           "client_id": "1003328431147-igi3g29r3l4ppo5nr3uv1cfinj6pqkhj.apps.googleusercontent.com",
           "client_type": 3
