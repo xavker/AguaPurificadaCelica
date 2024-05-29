@@ -11,11 +11,11 @@ android {
         applicationId 'com.xavker.aguapurificadacelica'
         minSdk 24
         targetSdk 34
-        versionCode 3
+        versionCode 5
         versionName '1.0.1'
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        versionCode 3
+
     }
 
     buildTypes {

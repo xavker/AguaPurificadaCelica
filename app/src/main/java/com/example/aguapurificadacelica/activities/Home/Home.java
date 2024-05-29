@@ -4,9 +4,11 @@ import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,6 +32,8 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.prefs.Preferences;
+
 public class Home extends AppCompatActivity {
     private Button mButtonLogin;
     private Button mButtonConocenos;
@@ -39,8 +43,13 @@ public class Home extends AppCompatActivity {
     private Button celica,macara;
     private ConfigProvaider configProvaider;
     private  AlertDialog alert;
+
+
     private AlertDialog.Builder builder;
     private  Boolean deliveryaux;
+
+
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,17 +78,20 @@ public class Home extends AppCompatActivity {
         v.startAnimation(animation3);
         v.startAnimation(animation4);
         v.startAnimation(animation5);
-        mButtonpedir1b.setAnimation(animation1);
-        mButtonLogin.setAnimation(animation2);
-        mButtonConocenos.setAnimation(animation3);
-        mButtonContactanos.setAnimation(animation5);
-        mButtonEncuentranos.setAnimation(animation4);
+
 
         deliveryaux=deliveryOn();
 
         LayoutInflater inflater = LayoutInflater.from(Home.this);
         View regis1 = inflater.inflate(R.layout.popup_ciudad, null,false);
 
+
+
+        mButtonpedir1b.setAnimation(animation1);
+        mButtonLogin.setAnimation(animation2);
+        mButtonConocenos.setAnimation(animation3);
+        mButtonContactanos.setAnimation(animation5);
+        mButtonEncuentranos.setAnimation(animation4);
 
 
         mButtonLogin.setOnClickListener(new View.OnClickListener() {
