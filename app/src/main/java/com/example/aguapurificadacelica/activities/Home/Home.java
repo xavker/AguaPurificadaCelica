@@ -1,5 +1,6 @@
 package com.example.aguapurificadacelica.activities.Home;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -19,6 +20,8 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.example.aguapurificadacelica.R;
 import com.example.aguapurificadacelica.activities.Conocenos.Conocenos;
@@ -48,7 +51,8 @@ public class Home extends AppCompatActivity {
     private AlertDialog.Builder builder;
     private  Boolean deliveryaux;
 
-
+    private boolean tienePermisoCamara = false;
+    private static final int CODIGO_PERMISOS_CAMARA = 1;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -71,6 +75,7 @@ public class Home extends AppCompatActivity {
         final Animation animation3= AnimationUtils.loadAnimation(this,R.anim.anim_translate3);
         final Animation animation4= AnimationUtils.loadAnimation(this,R.anim.anim_translate4);
         final Animation animation5= AnimationUtils.loadAnimation(this,R.anim.anim_translate5);
+
 
         View v=new View(this);
         v.startAnimation(animation1);
@@ -196,6 +201,7 @@ public class Home extends AppCompatActivity {
             }
         });
 
+        verificarYPedirPermisosDeCamara();
 
     }
     private Boolean deliveryOn(){
@@ -232,5 +238,49 @@ public class Home extends AppCompatActivity {
         Intent intent = new Intent(Home.this, Home.class);
         startActivity(intent);
     }
+    private void verificarYPedirPermisosDeCamara() {
+        int estadoDePermiso = ContextCompat.checkSelfPermission(Home.this, Manifest.permission.CAMERA);
+        if (estadoDePermiso == PackageManager.PERMISSION_GRANTED) {
+            // En caso de que haya dado permisos ponemos la bandera en true
+            // y llamar al método
+            permisoDeCamaraConcedido();
+        } else {
+            // Si no, entonces pedimos permisos. Ahora mira onRequestPermissionsResult
+            ActivityCompat.requestPermissions(Home.this,
+                    new String[]{Manifest.permission.CAMERA},
+                    CODIGO_PERMISOS_CAMARA);
+        }
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode) {
+            case CODIGO_PERMISOS_CAMARA:
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    permisoDeCamaraConcedido();
+                } else {
+                    permisoDeCamaraDenegado();
+                }
+                break;
 
+
+            // Aquí más casos dependiendo de los permisos
+            // case OTRO_CODIGO_DE_PERMISOS...
+
+        }
+    }
+    private void permisoDeCamaraConcedido() {
+        // Aquí establece las banderas o haz lo que
+        // ibas a hacer cuando el acceso a la cámara se condeciera
+        // Por ejemplo puedes poner la bandera en true y más
+        // tarde en otra función comprobar esa bandera
+        Toast.makeText(Home.this, "El permiso para la cámara está concedido", Toast.LENGTH_SHORT).show();
+        tienePermisoCamara = true;
+    }
+
+    private void permisoDeCamaraDenegado() {
+        // Esto se llama cuando el usuario hace click en "Denegar" o
+        // cuando lo denegó anteriormente
+        Toast.makeText(Home.this, "El permiso para la cámara está denegado", Toast.LENGTH_SHORT).show();
+    }
 }
